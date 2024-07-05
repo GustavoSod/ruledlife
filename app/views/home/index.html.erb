@@ -1,0 +1,71 @@
+<html lang="pt-BR">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<% if user_signed_in? %>
+
+<div class="flex flex-col items-center justify-center mt-10">
+  <div class="flex items-center justify-center h-[40vh] w-[70%] rounded-xl" data-aos="fade-left">
+    <div class=" flex items-center justify-between w-full">
+      <h1 class="text-5xl font-semibold text-white">Veja Suas<br><span class="text-red-600">Dietas</span></h1>
+    <div class="bg-red-600 w-[40%] h-[200px] rounded-xl">
+      <h1>Conteúdo</h1>
+    </div>
+  </div>
+</div>
+
+<% else %>
+
+<div>
+  <div class="relative h-[80vh] bg-cover bg-center " style="background-image: url('<%= asset_path('gym.jpg') %>');">
+    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60 text-white">
+      <h1 class="text-7xl"><span class="text-red-700 font-semibold">Potencialize</span> sua vida</h1>
+      <p class="mt-4 text-base text-white max-w-[50%] text-center mt-6">
+        Transforme sua vida de forma mais rápida com o RuledLife. Treine onde quiser com nossos personal trainers online, e tenha acesso a planos alimentares e treinos personalizados, tudo em um só lugar!
+      </p>
+      <button class="bg-red-700 p-4 rounded-xl mt-8 text-xl">Saiba Mais</button>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center justify-center mt-10">
+    <div class="flex items-center justify-center h-[40vh] w-[70%] rounded-xl" data-aos="fade-left">
+      <div class=" flex items-center justify-between w-full">
+        <h1 class="text-5xl font-semibold text-white">Alimentação<br><span class="text-red-600">Regrada</span></h1>
+        <div class="bg-red-600 w-[40%] h-[200px] rounded-xl">
+          <h1>Conteúdo</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center h-[40vh] w-[70%] rounded-xl" data-aos="fade-right">
+      <div class=" flex items-center justify-between w-full">
+        <h1 class="text-5xl font-semibold text-white">Treinos<br><span class="text-red-600">Personalizados</span></h1>
+        <div class="bg-red-600 w-[40%] h-[200px] rounded-xl">
+          <h1>Conteúdo</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center h-[40vh] w-[70%] rounded-xl" data-aos="fade-left">
+      <div class=" flex items-center justify-between w-full">
+        <h1 class="text-5xl font-semibold text-white">Vida Mais<br><span class="text-red-600">Leve e Saudavel</span></h1>
+        <div class="bg-red-600 w-[40%] h-[200px] rounded-xl">
+          <h1>Conteúdo</h1>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<% end %>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2000,
+  });
+</script>
+
+</body>
+</html>
