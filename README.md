@@ -11,7 +11,7 @@ platform designed to provide an integrated fitness and wellness experience. User
 make sure you have [PostgresDB](https://www.postgresql.org/download/) installed and running in your machine.
 
 ```
-$ git clone git@github.com:plural-education/rails-admin.git
+$ git clone git@github.com:GustavoSod/ruledlife.git
 ```
 
 Enter into the folder and execute the bundle:
