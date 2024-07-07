@@ -4,13 +4,25 @@
   </head>
   <body>
     <% if user_signed_in? %>
-
       <div class="flex flex-col items-center justify-center mt-10">
-        <div class="flex items-center justify-center h-[40vh] w-[70%] rounded-xl" data-aos="fade-left">
-          <div class=" flex items-center justify-between w-full">
-            <h1 class="text-5xl font-semibold text-white">Veja Suas<br><span class="text-red-600">Dietas</span></h1>
-          <div class="bg-red-600 w-[40%] h-[200px] rounded-xl">
-            <h1>Conteúdo</h1>
+        <div class="flex h-[40vh] mb-20 p-20 w-[70%] bg-zinc-950 rounded-xl" data-aos="fade-left">
+          <div class="w-full flex justify-between">
+            <h1 class="text-5xl font-semibold text-white">Suas <span class="text-red-600">Dietas</span></h1>
+            <p class="text-gray-300 mt-1">Ver mais</p>
+          </div>
+        </div>
+        <div class="w-[70%] flex justify-between mb-20">
+          <div class="flex h-[40vh] p-20 w-[45%] bg-zinc-950 rounded-xl" data-aos="fade-left">
+            <div class="flex w-full justify-between">
+              <h1 class="text-5xl font-semibold text-white">Suas <span class="text-red-600">Metas</span></h1>
+              <p class="text-gray-300 mt-3">Ver mais</p>
+            </div>
+          </div>
+          <div class="flex h-[40vh] p-20 w-[45%] bg-zinc-950 rounded-xl" data-aos="fade-left">
+            <div class="flex w-full justify-between">
+              <h1 class="text-5xl font-semibold text-white">Suas <span class="text-red-600">Metas</span></h1>
+              <p class="text-gray-300 mt-3">Ver mais</p>
+            </div>
           </div>
         </div>
       </div>
@@ -29,30 +41,30 @@
         </div>
 
         <div class="flex justify-center items-center w-full mt-40 mb-16" data-aos="fade-down">
-            <%= image_tag("call.jpg", alt: "rss call", class: "w-[40%] rounded-l-lg h-[400px]") %>
-          <div class="flex flex-col justify-center w-[40%] rounded-r-lg bg-neutral-900 h-[400px] p-12">
+            <%= image_tag("call.jpg", alt: "rss call", class: "w-[35%] rounded-l-lg h-[400px]") %>
+          <div class="flex flex-col justify-center w-[35%] rounded-r-lg bg-zinc-950 h-[400px] p-12">
             <h2 class="text-5xl text-white font-semibold">Professores<span class="text-red-600"> Online</span></h2>
             <p class="text-gray-300 mt-20 text-start">Treine de qualquer lugar do mundo a hora que você quiser, com o melhor preço e com os melhores profissionais!!!</p>
           </div>
         </div>
 
         <div class="flex justify-center items-center w-full mt-36 mb-36" data-aos="fade-up">
-          <div class="flex flex-col justify-center w-[40%] rounded-l-lg bg-neutral-900 h-[400px] p-12">
-            <h2 class="text-5xl text-white font-semibold">Montar<span class="text-red-600"> Treino</span></h2>
+          <div class="flex flex-col justify-center w-[35%] rounded-l-lg bg-zinc-950 h-[400px] p-12">
+            <h2 class="text-5xl text-white font-semibold">Montar<span class="text-red-600"> Treinos</span></h2>
             <p class="text-gray-300 mt-20 text-start">Passou com um profissional e ele fez um treino pra você? salve ele aqui e seja notificado na hora exata!!</p>
           </div>
-          <%= image_tag("lifefit.jpg", alt: "rss call", class: "w-[40%] rounded-r-lg h-[400px]") %>
+          <%= image_tag("lifefit.jpg", alt: "rss call", class: "w-[35%] rounded-r-lg h-[400px]") %>
         </div>
 
         <div class="flex justify-center items-center w-full mt-40 mb-36" data-aos="fade-down">
-            <%= image_tag("food.jpg", alt: "rss call", class: "w-[40%] rounded-l-lg h-[400px]") %>
-          <div class="flex flex-col justify-center w-[40%] rounded-r-lg bg-neutral-900 h-[400px] p-12">
-            <h2 class="text-5xl text-white font-semibold">Montar<span class="text-red-600"> Dieta</span></h2>
+            <%= image_tag("food.jpg", alt: "rss call", class: "w-[35%] rounded-l-lg h-[400px]") %>
+          <div class="flex flex-col justify-center w-[35%] rounded-r-lg bg-zinc-950 h-[400px] p-12">
+            <h2 class="text-5xl text-white font-semibold">Suas<span class="text-red-600"> Dietas</span></h2>
             <p class="text-gray-300 mt-20 text-start">Pegue uma dieta com um profissional e adicione no nosso site, sempre mantendo você atualizado caso esqueça algo!!!</p>
           </div>
         </div>
 
-        <div class="w-full flex justify-around items-center bg-neutral-900 mt-24 mb-36 p-8">
+        <div class="w-full flex justify-around items-center bg-zinc-950 mt-24 mb-28 p-8">
           <h1 class="text-3xl text-gray-400 font-semibold">Logo1</h1>
           <h1 class="text-3xl text-gray-400 font-semibold">Logo2</h1>
           <h1 class="text-3xl text-gray-400 font-semibold">Logo3</h1>
@@ -62,27 +74,27 @@
           <div>
             <h3 class="text-5xl font-semibold text-white">Nossos Planos</h3>
           </div>
-          <div id="plans" class="w-full flex justify-around mt-36 mb-36">
-            <div class="w-[350px] h-[500px] bg-black rounded-lg flex flex-col items-center justify-evenly">
+          <div id="plans" class="w-full flex justify-center items-center mt-36 mb-36">
+            <div class="w-[300px] h-[500px] bg-zinc-950 rounded-lg flex flex-col items-center justify-evenly">
               <h3 class ="text-white text-3xl font-bold">19,99 / mês</h3>
               <p class="text-white">lalalalala lalalalala</p>
               <p class="text-white">lalalalala lalalalala</p>
               <p class="text-white">lalalalala lalalalala</p>
-              <p class="text-white">lalalalala lalalalala</p>
+              <p class="text-white">Em Breve</p>
             </div>
-            <div class="w-[350px] h-[500px] bg-red-600  rounded-lg flex flex-col items-center justify-evenly">
-              <h3 class ="text-white text-3xl font-bold">Free</h3>
+            <div class="w-[400px] h-[550px] bg-red-600  rounded-lg flex flex-col items-center justify-evenly">
+              <h3 class ="text-white text-4xl font-bold">FREE</h3>
               <p class="text-white">lalalalala lalalalala</p>
               <p class="text-white">lalalalala lalalalala</p>
               <p class="text-white">lalalalala lalalalala</p>
-              <p class="text-white">lalalalala lalalalala</p>
+              <p class="text-white">Já Disponível</p>
             </div>
-            <div class="w-[350px] h-[500px] bg-black  rounded-lg flex flex-col items-center justify-evenly">
+            <div class="w-[300px] h-[500px] bg-neutral-950  rounded-lg flex flex-col items-center justify-evenly">
               <h3 class ="text-white text-3xl font-bold">109,99 / mês</h3>
               <p class="text-white">lalalalala lalalalala</p>
               <p class="text-white">lalalalala lalalalala</p>
               <p class="text-white">lalalalala lalalalala</p>
-              <p class="text-white">lalalalala lalalalala</p>
+              <p class="text-white">Em Breve</p>
             </div>
           </div>
         </div>
