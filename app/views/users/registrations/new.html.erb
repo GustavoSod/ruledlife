@@ -1,9 +1,9 @@
 
-<div class="flex flex-col h-[85vh] justify-center items-center bg-zinc-900">
-  <h2 class="text-white text-center text-5xl mb-12 font-semibold">Crie sua<span class="text-red-600"> Conta</span></h2>
+<div class="flex flex-col sm:h-[85vh] h-[100vh] justify-center items-center bg-zinc-900">
+  <h2 class="text-white text-center sm:text-5xl text-3xl mb-12 font-semibold">Crie sua<span class="text-red-600"> Conta</span></h2>
   <%= render "users/shared/error_messages", resource: resource %>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "w-full max-w-xs" }) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "sm:w-full w-[80%] max-w-xs" }) do |f| %>
     <div class="field mb-4">
       <%= f.label :email, class: "text-white mb-2" %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Digite seu email", class:"w-full bg-gray-700 border-none rounded-lg p-4" %>
