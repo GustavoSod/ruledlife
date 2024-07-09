@@ -20,6 +20,7 @@
       <div class="sm:flex hidden">
         <ul class="flex itens-center text-white text-base items-center">
         <% if user_signed_in? %>
+          <%=link_to "Tarefas", new_user_registration_path, class:"p-2 rounded-xl cursor-pointer ml-4"%>
           <%=link_to "Dietas", new_user_registration_path, class:"p-2 rounded-xl cursor-pointer ml-4"%>
           <%=link_to "Treinos", new_user_registration_path, class:"p-2 rounded-xl cursor-pointer ml-4"%>
           <%= button_to "Sair", destroy_user_session_path, method: :delete, class:"bg-red-700 p-2 rounded-xl cursor-pointer ml-4" %>
