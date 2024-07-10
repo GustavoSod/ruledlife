@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full">
   <head>
     <title>RuledLife</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-zinc-900">
-  
-    <div id="header" class="flex items-center justify-around bg-zinc-900 p-8">
+  <body class="bg-zinc-900 flex flex-col h-full">
+    <div id="header" class="flex items-center justify-around bg-zinc-950 p-8">
       <div>
-        <%=link_to "RuledLife", root_path, class:"text-4xl text-white font-semibold"%>
+        <%= link_to "RuledLife", root_path, class: "text-4xl text-white font-semibold" %>
       </div>
       <div class="sm:flex hidden">
-        <ul class="flex itens-center text-white text-base items-center">
-        <% if user_signed_in? %>
-          <%=link_to "Tarefas", new_user_registration_path, class:"p-2 rounded-xl cursor-pointer ml-4"%>
-          <%=link_to "Dietas", new_user_registration_path, class:"p-2 rounded-xl cursor-pointer ml-4"%>
-          <%=link_to "Treinos", new_user_registration_path, class:"p-2 rounded-xl cursor-pointer ml-4"%>
-          <%= button_to "Sair", destroy_user_session_path, method: :delete, class:"bg-red-700 p-2 rounded-xl cursor-pointer ml-4" %>
-        <% else %>
-          <%=link_to "Entrar", new_user_session_path%>
-          <%=link_to "Cadastre-se", new_user_registration_path, class:"bg-red-700 p-2 rounded-xl cursor-pointer ml-4"%>
-        <%end%>
+        <ul class="flex items-center text-white text-base">
+          <% if user_signed_in? %>
+            <%= link_to "Tarefas", tasks_path, class: "p-2 rounded-xl cursor-pointer ml-4" %>
+            <%= link_to "Dietas", new_user_registration_path, class: "p-2 rounded-xl cursor-pointer ml-4" %>
+            <%= link_to "Treinos", new_user_registration_path, class: "p-2 rounded-xl cursor-pointer ml-4" %>
+            <%= button_to "Sair", destroy_user_session_path, method: :delete, class: "bg-red-700 p-2 rounded-xl cursor-pointer ml-4" %>
+          <% else %>
+            <%= link_to "Entrar", new_user_session_path %>
+            <%= link_to "Cadastre-se", new_user_registration_path, class: "bg-red-700 p-2 rounded-xl cursor-pointer ml-4" %>
+          <% end %>
         </ul>
       </div>
     </div>
 
-    <%= yield %>
+    <div id="content" class="flex-1">
+      <%= yield %>
+    </div>
 
-    <div id="footer" class="w-full sm:h-[300px] bg-zinc-950 flex sm:flex-row flex-col items-center justify-around">
+    <div id="footer" class="w-full sm:h-[300px] sm:p-24 bg-zinc-950 flex sm:flex-row flex-col items-center justify-around">
       <div>
         <h3 class="sm:mt-0 mt-28 text-4xl text-white font-semibold">RuledLife</h3>
         <p class="text-gray-300 text-xs mt-4">Av Tal lala 123 </p>
@@ -45,12 +43,11 @@
         <p class="text-gray-300 text-xs mt-4">Instagram / Facebook </p>
         <p class="text-gray-300 text-xs mt-4">@todos os direitos reservados</p>
       </div>
-      <div class="sm:mb-0 mb-16 ">
+      <div class="sm:mb-0 mb-16">
         <h3 class="sm:mt-0 mt-28 text-2xl text-white font-semibold">Contato</h3>
         <p class="text-gray-300 text-xs mt-4">0800 333 333</p>
         <p class="text-gray-300 text-xs mt-4">contato@ruledlife.com</p>
       </div>
     </div>
-    
   </body>
 </html>
