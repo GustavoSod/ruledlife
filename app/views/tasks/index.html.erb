@@ -1,33 +1,57 @@
-<div class="w-[100%] flex flex-col justify-center items-center mb-32 mt-6">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
-
-  <% content_for :title, "Tasks" %>
-
-  <div class="w-full flex items-center justify-center">
-    <div class="sm:w-[60%] w-full flex sm:justify-between justify-around items-center mt-14 mb-14">
-      <h1 class="font-bold sm:text-4xl text-3xl text-white">Tarefas</h1>
-      <%= link_to "Nova Tarefa +", new_task_path, class: "rounded-lg sm:py-3 py-2 sm:px-5 px-4 bg-red-700 text-white block sm:font-medium" %>
-    </div>
-  </div>
-
-  <div id="tasks" class="sm:w-[75%] w-[90%] justify-center flex items-center flex-wrap">
-    <% if @tasks.any? %>
-      <% @tasks.each do |task| %>
-        <div class="bg-zinc-950 sm:w-[420px] w-[90%] flex flex-col rounded-xl p-4 w-[300px] truncate mb-10 pl-6 sm:ml-10">
-          <%= render task %>
-          <p>
-            <%= link_to "Show this task", task, class: "rounded-lg py-3 mb-4 px-5 bg-green-500 inline-block font-medium text-white" %>
-          </p>
-        </div>
+<html lang="pt-BR">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="w-[100%] flex flex-col justify-center items-center mb-32 mt-6" data-aos="fade-right">
+      <% if notice.present? %>
+        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
       <% end %>
-    <% else %>
-      <div class="h-[60vh] w-[75%] flex items-left justify-left">
-        <p class="text-gray-400 text-xl mt-8">
-          Sem tarefas, adicione novas tarefas e mantenha sua disciplina.
-        </p>
+
+      <% content_for :title, "Tasks" %>
+
+      <div class="w-full flex items-center justify-center">
+        <div class="sm:w-[60%] w-full flex sm:justify-between justify-around items-center mt-14 mb-14">
+          <h1 class="font-bold sm:text-4xl text-3xl text-white">Tarefas</h1>
+          <%= link_to "Nova Tarefa +", new_task_path, class: "rounded-lg sm:py-3 py-2 sm:px-5 px-4 bg-red-700 text-white block sm:font-medium" %>
+        </div>
       </div>
-    <% end %>
-  </div>
-</div>
+
+      <div id="tasks" class="sm:w-[75%] w-[90%] justify-center flex items-center flex-wrap">
+        <% if @tasks.any? %>
+          <% @tasks.each do |task| %>
+            <div class="bg-zinc-950 sm:w-[420px] w-[90%] sm:max-w-[420px] flex flex-col rounded-xl p-4 mb-10 pl-6 sm:ml-10">
+              <div class="w-[90%] truncate">
+                <p class="my-5">
+                  <strong class="block mb-1 text-red-600 text-xl font-semibold">Title:</strong>
+                  <%= tag.span task.title, class: "text-gray-400" %>
+                </p>
+                <p class="my-3">
+                  <strong class="block font-semibold mb-1 text-red-600 text-xl">Description:</strong>
+                  <%= tag.span task.description, class: "text-gray-400 truncate" %>
+                </p>
+              </div>
+              <p>
+                <%= link_to "Ver Mais >", task, class: "rounded-lg py-1 mb-4 mt-4 px-2 bg-green-600 inline-block text-base text-white" %>
+              </p>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="h-[60vh] w-[75%] flex items-left justify-left">
+            <p class="text-gray-400 text-xl mt-8">
+              Sem tarefas, adicione novas tarefas e mantenha sua disciplina.
+            </p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
+    
+  </body>
+</html>
