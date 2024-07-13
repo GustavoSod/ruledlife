@@ -9,18 +9,14 @@
     <%= tag.span dish.description, class: "text-white break-words" %>
   </p>
 
-  <p class="my-5">
-    <strong class="block mb-1 text-red-600 text-xl font-semibold">Calories:</strong>
-    <%= tag.span dish.calories, class: "text-white" %>
+  <p class="my-5 flex">
+    <strong class="block mb-1 text-red-600 text-base font-semibold">Calories:</strong>
+    <%= tag.span dish.calories, class: "text-white pl-2" %>
+    <%= tag.span "kcal", class: "text-gray-400 pl-1" %>
   </p>
 
   <p class="my-5">
     <strong class="block mb-1 text-red-600 text-xl font-semibold">Image:</strong>
     <%= tag.span dish.image, class: "text-white" %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block mb-1 text-red-600 text-xl font-semibold">Day:</strong>
-    <%= tag.span dish.day.name, class: "text-white" %>
   </p>
 </div>
