@@ -7,3 +7,17 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+days_of_week = [
+  { name: 'Segunda-feira' },
+  { name: 'Terça-feira' },
+  { name: 'Quarta-feira' },
+  { name: 'Quinta-feira' },
+  { name: 'Sexta-feira' },
+  { name: 'Sábado' },
+  { name: 'Domingo' }
+]
+
+days_of_week.each do |day_attrs|
+  Day.find_or_create_by!(day_attrs)
+end

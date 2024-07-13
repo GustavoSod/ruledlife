@@ -1,0 +1,26 @@
+<div id="<%= dom_id(dish) %>" class="sm:ml-0 sm:ml-0 ml-0">
+  <p class="my-5">
+    <strong class="block mb-1 text-red-600 text-xl font-semibold">Title:</strong>
+    <%= tag.span dish.title, class: "text-white" %>
+  </p>
+
+  <p class="lg:w-[50vw] w-[80vw]">
+    <strong class="block mb-1 text-red-600 text-xl font-semibold">Description:</strong>
+    <%= tag.span dish.description, class: "text-white break-words" %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block mb-1 text-red-600 text-xl font-semibold">Calories:</strong>
+    <%= tag.span dish.calories, class: "text-white" %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block mb-1 text-red-600 text-xl font-semibold">Image:</strong>
+    <%= tag.span dish.image, class: "text-white" %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block mb-1 text-red-600 text-xl font-semibold">Day:</strong>
+    <%= tag.span dish.day.name, class: "text-white" %>
+  </p>
+</div>

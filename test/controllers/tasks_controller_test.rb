@@ -2,7 +2,7 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
   
   setup do
-    @user = users(:one) # Assuming you have a user fixture or factory
+    @user = users(:one)
     sign_in @user
     @task = tasks(:one)
   end
