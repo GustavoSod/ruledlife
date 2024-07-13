@@ -17,23 +17,23 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :title, class: 'text-white' %>
+    <%= form.label :Título, class: 'text-white' %>
     <%= form.text_field :title, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full bg-gray-700 border-none" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :description, class: 'text-white' %>
+    <%= form.label :Descrição, class: 'text-white' %>
     <%= form.text_area :description, rows: 4, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full bg-gray-700 border-none" %>
   </div>
 
   <div class="w-full flex justify-between items-end mb-10">
     <div class="w-[40%]">
-      <%= form.label :calories, class: 'text-white' %>
+      <%= form.label :Calorias, class: 'text-white' %>
       <%= form.number_field :calories, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full bg-gray-700 border-none" %>
     </div>
 
     <div class="field">
-      <%= form.label :day, class: 'text-white' %>
+      <%= form.label :Dia, class: 'text-white' %>
       <%= form.collection_select :day_id, @days, :id, :name, { }, { class: "text-white sm:w-[100%] w-[50px] border-gray-400 bg-gray-700 border-none" } %>
     </div>
   </div>
