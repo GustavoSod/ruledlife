@@ -1,72 +1,78 @@
-<div>
-  <div class="relative sm:h-[80vh] h-[100vh] bg-cover bg-center " style="background-image: url('<%= asset_path('gym.jpg') %>');">
+<div class="relative">
+  <div class="w-full items-center justify-center relative z-10">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block absolute top-5 left-5" id="notice"><%= notice %></p>
+    <% end %>
+  </div>
+  
+  <div class="sm:h-[80vh] h-[100vh] bg-cover bg-center relative z-0" style="background-image: url('<%= asset_path('gym.jpg') %>');">
     <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60 text-white">
       <h1 class="md:text-7xl sm:text-5xl text-4xl text-center"><span class="text-red-700 font-semibold">Potencialize</span> sua vida</h1>
-        <p class="mt-4 sm:text-base text-xs text-white max-w-[50%] text-center mt-6">
-          Transforme sua vida de forma mais rápida com o RuledLife. Treine onde quiser com nossos personal trainers online, e tenha acesso a planos alimentares e treinos personalizados, tudo em um só lugar!
-        </p>
-        <button class="bg-red-700 md:p-4 p-3 rounded-xl mt-8 sm:text-xl text-base">Saiba Mais</button>
+      <p class="mt-4 sm:text-base text-xs text-white max-w-[50%] text-center mt-6">
+        Transforme sua vida de forma mais rápida com o RuledLife. Treine onde quiser com nossos personal trainers online, e tenha acesso a planos alimentares e treinos personalizados, tudo em um só lugar!
+      </p>
+      <button class="bg-red-700 md:p-4 p-3 rounded-xl mt-8 sm:text-xl text-base">Saiba Mais</button>
     </div>
   </div>
 
   <div class="flex xl:flex-row flex-col justify-center items-center w-full sm:mt-40 mt-24 sm:mb-36 mb-4" data-aos="fade-down">
-    <%= image_tag("call.jpg", alt: "rss call", class: "xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-l-lg md:h-[400px] h-[300px] object-cover") %>
-    <div class="flex flex-col justify-center xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-r-lg bg-zinc-950 h-[400px] p-12">
+    <%= image_tag("call.jpg", alt: "rss call", class: "xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-l-lg md:h-[400px] h-[300px] object-cover z-0") %>
+    <div class="flex flex-col justify-center xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-r-lg bg-zinc-950 h-[400px] p-12 z-10 relative">
       <h2 class="text-white font-semibold sm:text-5xl text-4xl">Aulas<span class="text-red-600"> Online</span></h2>
-        <p class="text-gray-300 mt-20 text-start">Treine de qualquer lugar do mundo a hora que você quiser, com o melhor preço e com os melhores profissionais!!!</p>
+      <p class="text-gray-300 mt-20 text-start">Treine de qualquer lugar do mundo a hora que você quiser, com o melhor preço e com os melhores profissionais!!!</p>
     </div>
   </div>
 
   <div class="flex xl:flex-row flex-col justify-center items-center w-full sm:mt-36 mt-14 sm:mb-36 mb-4" data-aos="fade-up">
     <div class="flex flex-col justify-center xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-l-lg bg-zinc-950 h-[400px] p-12">
       <h2 class="sm:text-5xl text-4xl text-white font-semibold">Montar<span class="text-red-600"> Treinos</span></h2>
-        <p class="text-gray-300 mt-20 text-start">Passou com um profissional e ele fez um treino pra você? salve ele aqui e seja notificado na hora exata!!</p>
+      <p class="text-gray-300 mt-20 text-start">Passou com um profissional e ele fez um treino pra você? salve ele aqui e seja notificado na hora exata!!</p>
     </div>
-    <%= image_tag("lifefit.jpg", alt: "rss call", class: "xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-r-lg md:h-[400px] h-[300px] object-cover") %>
-   </div>
+    <%= image_tag("lifefit.jpg", alt: "rss call", class: "xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-r-lg md:h-[400px] h-[300px] object-cover z-0") %>
+  </div>
 
-    <div class="flex xl:flex-row flex-col justify-center items-center w-full sm:mt-40 mt-14 sm:mb-36 mb-14" data-aos="fade-down">
-      <%= image_tag("food.jpg", alt: "rss call", class: "xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-l-lg md:h-[400px] h-[300px] object-cover") %>
-      <div class="flex flex-col justify-center xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-r-lg bg-zinc-950 h-[400px] p-12">
-        <h2 class="sm:text-5xl text-4xl text-white font-semibold">Suas<span class="text-red-600"> Dietas</span></h2>
-          <p class="text-gray-300 mt-20 text-start">Pegue uma dieta com um profissional e adicione no nosso site, sempre mantendo você atualizado caso esqueça algo!!!</p>
+  <div class="flex xl:flex-row flex-col justify-center items-center w-full sm:mt-40 mt-14 sm:mb-36 mb-14" data-aos="fade-down">
+    <%= image_tag("food.jpg", alt: "rss call", class: "xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-l-lg md:h-[400px] h-[300px] object-cover z-0") %>
+    <div class="flex flex-col justify-center xl:w-[35%] sm:w-[60%] w-[85%] xl:rounded-r-lg bg-zinc-950 h-[400px] p-12 z-10 relative">
+      <h2 class="sm:text-5xl text-4xl text-white font-semibold">Suas<span class="text-red-600"> Dietas</span></h2>
+      <p class="text-gray-300 mt-20 text-start">Pegue uma dieta com um profissional e adicione no nosso site, sempre mantendo você atualizado caso esqueça algo!!!</p>
+    </div>
+  </div>
+
+  <div class="w-full flex justify-around items-center bg-zinc-950 sm:mt-24 mt-0 mb-28 p-8">
+    <h1 class="sm:text-3xl text-xl text-gray-400 font-semibold">Logo1</h1>
+    <h1 class="sm:text-3xl text-xl text-gray-400 font-semibold">Logo2</h1>
+    <h1 class="sm:text-3xl text-xl text-gray-400 font-semibold">Logo3</h1>
+  </div>
+
+  <div class="flex flex-col items-center justify-center" data-aos="fade-right">
+    <div>
+      <h3 class="sm:text-5xl text-4xl font-semibold text-white">Nossos Planos</h3>
+    </div>
+    <div id="plans" class="w-full flex lg:flex-row flex-col justify-center items-center md:mt-36 mt-20 mb-36">
+      <div class="sm:w-[300px] w-[80%] h-[500px] bg-zinc-950 rounded-lg flex flex-col items-center justify-evenly">
+        <h3 class="text-white text-3xl font-bold">19,99 / mês</h3>
+        <p class="text-white">Montar Treinos</p>
+        <p class="text-white">Montar Dietas</p>
+        <p class="text-white">Montar Rotinas</p>
+        <p class="text-white text-center">Auxílio profissional <br> via chat</p>
+        <p class="text-white text-2xl font-bold">Em Breve</p>
       </div>
-    </div>
-
-    <div class="w-full flex justify-around items-center bg-zinc-950 sm:mt-24 mt-0 mb-28 p-8">
-      <h1 class="sm:text-3xl text-xl text-gray-400 font-semibold">Logo1</h1>
-      <h1 class="sm:text-3xl text-xl text-gray-400 font-semibold">Logo2</h1>
-      <h1 class="sm:text-3xl text-xl text-gray-400 font-semibold">Logo3</h1>
-    </div>
-
-    <div class="flex flex-col items-center justify-center" data-aos="fade-right">
-      <div>
-        <h3 class="sm:text-5xl text-4xl font-semibold text-white">Nossos Planos</h3>
+      <div class="sm:w-[400px] w-[80%] h-[550px] bg-red-600 rounded-lg flex flex-col items-center justify-evenly">
+        <h3 class="text-white text-4xl font-bold">FREE</h3>
+        <p class="text-white">Montar Treinos</p>
+        <p class="text-white">Montar Dietas</p>
+        <p class="text-white">Montar Rotinas</p>
+        <p class="text-white text-2xl font-bold">Já Disponível</p>
       </div>
-      <div id="plans" class="w-full flex lg:flex-row flex-col justify-center items-center md:mt-36 mt-20 mb-36">
-        <div class="sm:w-[300px] w-[80%] h-[500px] bg-zinc-950 rounded-lg flex flex-col items-center justify-evenly">
-          <h3 class ="text-white text-3xl font-bold">19,99 / mês</h3>
-          <p class="text-white">Montar Treinos</p>
-          <p class="text-white">Montar Dietas</p>
-          <p class="text-white">Montar Rotinas</p>
-          <p class="text-white text-center">Auxílio profissional <br> via chat</p>
-          <p class="text-white text-2xl font-bold">Em Breve</p>
-        </div>
-        <div class="sm:w-[400px] w-[80%] h-[550px] bg-red-600  rounded-lg flex flex-col items-center justify-evenly">
-          <h3 class ="text-white text-4xl font-bold">FREE</h3>
-          <p class="text-white">Montar Treinos</p>
-          <p class="text-white">Montar Dietas</p>
-          <p class="text-white">Montar Rotinas</p>
-          <p class="text-white text-2xl font-bold">Já Disponível</p>
-        </div>
-        <div class="sm:w-[300px] w-[80%] h-[500px] bg-neutral-950  rounded-lg flex flex-col items-center justify-evenly">
-          <h3 class ="text-white text-3xl font-bold">109,99 / mês</h3>
-          <p class="text-white">Montar Treinos</p>
-          <p class="text-white">Montar Dietas</p>
-          <p class="text-white">Montar Rotinas</p>
-          <p class="text-white">Aulas Grátis</p>
-          <p class="text-white text-center">Auxílio profissional <br> via call</p> 
-          <p class="text-white text-2xl font-bold">Em Breve</p>
+      <div class="sm:w-[300px] w-[80%] h-[500px] bg-neutral-950 rounded-lg flex flex-col items-center justify-evenly">
+        <h3 class="text-white text-3xl font-bold">109,99 / mês</h3>
+        <p class="text-white">Montar Treinos</p>
+        <p class="text-white">Montar Dietas</p>
+        <p class="text-white">Montar Rotinas</p>
+        <p class="text-white">Aulas Grátis</p>
+        <p class="text-white text-center">Auxílio profissional <br> via call</p>
+        <p class="text-white text-2xl font-bold">Em Breve</p>
       </div>
     </div>
   </div>
