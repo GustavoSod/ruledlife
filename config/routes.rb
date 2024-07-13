@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :treinos
   resources :dishes
   resources :tasks
   devise_for :users

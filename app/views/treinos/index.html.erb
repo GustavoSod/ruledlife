@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dietas</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Estilos adicionais podem ser adicionados aqui conforme necessário */
+  </style>
+</head>
+<body>
+  <div class="w-full">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <% content_for :title, "Dietas" %>
+    <div class="w-[100%] flex flex-col justify-center items-center sm:mb-32 mb-10 mt-6" data-aos="fade-right">
+      <div class="w-full flex items-center justify-center">
+        <div class="sm:w-[60%] w-full flex sm:justify-between justify-around items-center sm:mt-14 mt-10 mb-14">
+          <h1 class="font-bold sm:text-4xl text-3xl text-white">Treinos</h1>
+          <%= link_to "Novo Treino +", new_treino_path, class: "rounded-lg py-3 px-5 bg-red-700 text-white block font-medium" %>
+        </div>
+      </div>
+
+      <div class="w-[80%] flex overflow-x-scroll">
+        <% ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"].each do |dia| %>
+          <div class="flex flex-col sm:w-full w-[90%] items-center sm:mr-14 mr-5">
+            <h2 class="font-bold text-2xl text-white mb-4 sm:mt-14 "><%= dia %></h2>
+            <div class="sm:w-[400px] w-[280px] overflow-y-scroll flex flex-col items-center max-h-[550px]">
+              <% day = Day.find_by(name: dia) %>
+              <% if day %>
+                <% treinos_for_day = @treinos.select { |treino| treino.day_id == day.id } %>
+                <% if treinos_for_day.any? %>
+                  <% treinos_for_day.each do |treino| %>
+                    <div class="bg-zinc-950 sm:w-[400px] w-[80%] rounded-xl p-4 mt-4 mb-4">
+                      <div class="w-[90%] truncate">
+                        <%= render treino %>
+                        <p>
+                          <%= link_to "Ver Mais >", treino, class: "rounded-lg py-1 px-2 bg-green-600 inline-block text-base text-gray-200" %>
+                        </p>
+                      </div>
+                    </div>
+                  <% end %>
+                <% else %>
+                  <p class="text-gray-400 text-base mt-4 sm:w-[200px] w-[60%]">
+                    Sem Treinos, adicione novos treinos e mantenha sua físico em dia.
+                  </p>
+                <% end %>
+              <% else %>
+                <p class="text-gray-400 text-base mt-4">
+                  Dia não encontrado.
+                </p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2000,
+    });
+  </script>
+</body>
+</html>
