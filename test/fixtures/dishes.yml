@@ -4,7 +4,6 @@ one:
   title: MyString
   description: MyText
   calories: 1
-  image: MyString
   user: one
   day: one
 
@@ -12,6 +11,5 @@ two:
   title: MyString
   description: MyText
   calories: 1
-  image: MyString
   user: two
   day: two
