@@ -17,7 +17,6 @@ class DishesTest < ApplicationSystemTestCase
     fill_in "Calories", with: @dish.calories
     fill_in "Day", with: @dish.day_id
     fill_in "Description", with: @dish.description
-    fill_in "Image", with: @dish.image
     fill_in "Title", with: @dish.title
     fill_in "User", with: @dish.user_id
     click_on "Create Dish"
@@ -33,7 +32,6 @@ class DishesTest < ApplicationSystemTestCase
     fill_in "Calories", with: @dish.calories
     fill_in "Day", with: @dish.day_id
     fill_in "Description", with: @dish.description
-    fill_in "Image", with: @dish.image
     fill_in "Title", with: @dish.title
     fill_in "User", with: @dish.user_id
     click_on "Update Dish"

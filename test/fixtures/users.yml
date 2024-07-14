@@ -4,12 +4,19 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {
+
+# column: value
+
+# No arquivo fixtures/users.yml
+
+one:
   email: user_one@example.com
-}
-# column: value
-#
-two: {
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.zone.now - 1.hour %>
+  confirmation_sent_at: <%= Time.zone.now - 2.hours %>
+
+two:
   email: user_two@example.com
-}
-# column: value
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password456') %>
+  confirmed_at: <%= Time.zone.now - 1.hour %>
+  confirmation_sent_at: <%= Time.zone.now - 2.hours %>
