@@ -48,7 +48,7 @@ Rails.application.configure do
   # Can be used together with config.force_ssl for Strict-Transport-Security and secure cookies.
   # config.assume_ssl = true
 
-  config.action_mailer.default_url_options = { host => 'vitalshape.onrender.com' }
+  config.action_mailer.default_url_options = { host: 'vitalshape.onrender.com' }
 
   config.action_mailer.delivery_method = :smtp
 
