@@ -39,6 +39,8 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
+  config.active_support.deprecation = :notify
+
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = "wss://example.com/cable"
@@ -112,4 +114,12 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  # Exception notification configuration
+
+  config.middleware.use ExceptionNotification::Rack,
+    email: {
+      email_prefix: "[VitalShape] ",
+      sender_address: %{"Production - Error on Production Server" <gustavosod8@gmail.com>},
+      exception_recipients: ENV.fetch("EXCEPTION_RECIPIENTS", "").split(","),
+    }
 end

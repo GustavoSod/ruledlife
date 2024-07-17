@@ -108,6 +108,9 @@ GEM
       warden (~> 1.2.3)
     drb (2.2.1)
     erubi (1.13.0)
+    exception_notification (4.5.0)
+      actionmailer (>= 5.2, < 8)
+      activesupport (>= 5.2, < 8)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.5)
@@ -283,6 +286,7 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.9)
+  exception_notification
   importmap-rails
   jbuilder
   pg (~> 1.1)
