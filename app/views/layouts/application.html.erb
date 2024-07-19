@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="h-full">
 <head>
-  <title>RuledLife</title>
+  <title>VitalShape</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -11,7 +11,9 @@
 <body class="bg-zinc-900 flex flex-col h-full">
   <div id="header" class="flex items-center justify-around bg-zinc-950 p-8">
     <div>
-      <%= link_to "VitalShape", root_path, class: "text-4xl text-white font-semibold" %>
+      <%= link_to root_path, class: "text-4xl text-white font-semibold" do %>
+      <h1 class="sm:mt-0 mt-28 text-4xl text-white font-semibold">Vital<span class="text-red-700">Shape</span></h1>
+    <% end %>
     </div>
     <div class="sm:flex hidden">
       <ul class="flex items-center text-white text-base">
